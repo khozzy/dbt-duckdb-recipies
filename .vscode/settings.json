@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "files.associations": {
+        "*.sql": "jinja-sql",
+    },
+    "sql.linter.executablePath": "sqlfluff"
+}

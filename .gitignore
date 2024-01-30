@@ -1,0 +1,7 @@
+.venv
+.ruff_cache
+*.duckdb
+*.duckdb.**
+**/dbt_packages
+**/logs/
+dbt_project/target/

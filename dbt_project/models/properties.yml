@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: csv_files
+    tables:
+      - name: returns
+        meta:
+          external_location: "read_csv('data/returns.csv', columns={'return_id': 'integer', 'sale_id': 'integer', 'return_date': 'date', 'qty_returned': 'integer'}, header=true)"
+          formatter: oldstyle
+      - name: sales
+        meta:
+          external_location: "read_csv('data/sales.csv', columns={'sale_id': 'integer', 'sale_date': 'date', 'product': 'varchar', 'qty_sold': 'integer'}, header=true)"
+          formatter: oldstyle
