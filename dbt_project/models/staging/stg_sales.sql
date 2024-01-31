@@ -1,9 +1,8 @@
 with
     sales as (
         select
-            {{ dbt_utils.generate_surrogate_key(["sale_id"]) }} as '_KEY_Sale',
-            {{ dbt_utils.generate_surrogate_key(["product"]) }} as '_KEY_Product',
-            *
+            {{ surrogate_key("Sale", ["sale_id"]) }},
+            {{ surrogate_key("Product", ["product_id"]) }}
         from {{ ref("sales") }}
     ),
     final as (select * from sales)

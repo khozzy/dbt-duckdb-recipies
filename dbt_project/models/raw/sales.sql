@@ -1,1 +1,1 @@
-select * from {{ source("csv_files", "sales") }}
+SELECT * FROM {{ source("csv_files", "sales") }}

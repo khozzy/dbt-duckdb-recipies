@@ -1,8 +1,8 @@
 with
     returns as (
         select
-            {{ dbt_utils.generate_surrogate_key(["return_id"]) }} as '_KEY_Return',
-            {{ dbt_utils.generate_surrogate_key(["sale_id"]) }} as '_KEY_Sale',
+            {{ surrogate_key("Return", ["return_id"]) }},
+            {{ surrogate_key("Sale", ["sale_id"]) }},
             *,
         from {{ ref("returns") }}
     ),

@@ -8,5 +8,12 @@ sources:
           formatter: oldstyle
       - name: sales
         meta:
-          external_location: "read_csv('data/sales.csv', columns={'sale_id': 'integer', 'sale_date': 'date', 'product': 'varchar', 'qty_sold': 'integer'}, header=true)"
+          external_location: "read_csv('data/sales.csv', columns={'sale_id': 'integer', 'sale_date': 'date', 'product_id': 'integer', 'qty_sold': 'integer'}, header=true)"
+          formatter: oldstyle
+  
+  - name: json_files
+    tables:
+      - name: products
+        meta:
+          external_location: "read_json('data/products/*.json', columns={id: 'integer', name: 'varchar', sku: 'varchar'})"
           formatter: oldstyle

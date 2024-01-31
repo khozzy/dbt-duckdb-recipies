@@ -4,5 +4,16 @@
     "files.associations": {
         "*.sql": "jinja-sql",
     },
-    "sql.linter.executablePath": "sqlfluff"
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": ".*\\.sql(\\.jinja)?",
+                "isAsync": true,
+                "cmd": "sqlfmt ${file}"
+            }
+        ]
+    },
+    "sqlfluff.linter.run": "onSave",
+    "sqlfluff.experimental.format.executeInTerminal": true,
+    "editor.formatOnSave": false,
 }
