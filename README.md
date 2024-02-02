@@ -2,8 +2,8 @@
 Personal template for ad-hoc analysis performed locally with dbt and Duckdb.
 
 This repository showcase:
-- DBT with `dbt-duckdb` extension,
-- example of reading local files (`data/`),
+- DBT with [dbt-duckdb](https://github.com/duckdb/dbt-duckdb/) plugin,
+- example of reading local CSV and JSON files (`data/`),
 - Jinja SQL linting and formatting (VSCode support),
 - Jupyter integration (`notebooks/`)
 
@@ -27,6 +27,8 @@ make dbt
 ```
 
 ## Roadmap
+- Proper Puppini Bridge model,
 - Example of Python dbt model (+Ruff integration)
 - In memory execution and external materialization to Parquet
 - Makefile target for linting and formatting code
+- Papermill for notebooks
