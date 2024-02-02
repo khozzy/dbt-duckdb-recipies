@@ -1,7 +1,9 @@
 # DBT + Duckdb Template
-This repository feataures:
+Personal template for ad-hoc analysis performed locally with dbt and Duckdb.
+
+This repository showcase:
 - DBT with `dbt-duckdb` extension,
-- example of parsing local files (`data/`),
+- example of reading local files (`data/`),
 - Jinja SQL linting and formatting (VSCode support),
 - Jupyter integration (`notebooks/`)
 
