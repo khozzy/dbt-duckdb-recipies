@@ -1,17 +1,30 @@
-# USS with DBT
+# DBT + Duckdb Template
+This repository feataures:
+- DBT with `dbt-duckdb` extension,
+- example of parsing local files (`data/`),
+- Jinja SQL linting and formatting (VSCode support),
+- Jupyter integration (`notebooks/`)
 
-```
+## Setup
+```bash
 virtualenv --python=/opt/homebrew/opt/python@3.11/libexec/bin/python .venv
 source .venv/bin/activate.fish 
 pip install -r requirements.txt
 
+pipx install sqlfmt
 pipx install shandy-sqlfmt[jinja-template]
+pipx install ruff
 
 dbt --version
 ```
 
-TODO:
-- products.json (multiple files)
-- sqlfluff vscode extensions
-- notebook query example
-- python dbt model
+## Usage
+```bash
+make deps
+make dbt
+```
+
+## Roadmap
+- Example of Python dbt model (+Ruff integration)
+- In memory execution and external materialization to Parquet
+- Makefile target for linting and formatting code
